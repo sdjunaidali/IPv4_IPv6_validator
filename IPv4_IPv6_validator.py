@@ -35,9 +35,11 @@ def  check_IP( s):
         print "IPv6"
     else:
         print "Neither"
-        
 
-N = int(raw_input("Insert N: "))
-for i in range(0,N):
-    addr = raw_input("Insert address: ")
-    check_IP(addr)
+finished = False
+while (not finished):
+    addr = raw_input("Insert address to validate: ")
+    if addr == "end":
+        finished = True
+    else:
+        check_IP(addr)
